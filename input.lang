@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+struct aboba2 {
+    int y;
+    float w;
+};
+
+// Função recursiva normal, com retorno int
+int fatorial(int n) {
+    if (1 >= n) {
+        return 1;
+    }
+    return n * fatorial(n - 1);
+}
+
+void pulaLinha() {
+    printf(""); 
+}
+
+int main() {
+    int x = 0;
+    int i = 0;
+    int vetor[5]; 
+    char letra;
+    
+    // TESTE LÓGICO
+    printf("Digite 7 para testar logica: ");
+    scanf("%d", &x);
+
+    if (x >= 5 && 10 >= x) {
+        printf("Sucesso! %d esta entre 5 e 10.", x);
+    } else {
+        if (5 > x || x > 10) {
+             printf("Numero invalido.");
+        }
+    }
+    
+    pulaLinha();
+
+    // DO...WHILE
+    printf("Testando DO...WHILE:");
+    i = 0;
+    do {
+        printf("Loop passo: %d", i);
+        i++;
+    } while (5 > i); 
+
+    pulaLinha();
+
+    // RECURSÃO
+    printf("Calculando Fatorial de 5 (Recursao)...");
+    
+    // AGORA VAI FUNCIONAR a atribuição!
+    int fat = fatorial(5);
+    printf("Resultado de 5!: %d", fat);
+
+    // GETS
+    printf("Digite uma letra para GETS:");
+    gets(letra); 
+    printf("Voce digitou:");
+    puts(letra);
+    
+    return 0;
+}

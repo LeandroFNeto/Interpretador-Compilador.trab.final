@@ -1,0 +1,11 @@
+# Ignore arquivos de compilação Java
+*.class
+*.jar
+
+# Pasta de saída do VS Code
+.vscode/
+
+arvoreDer.bat
+genGrammar.bat
+MyTestRig.Java
+input.lang
