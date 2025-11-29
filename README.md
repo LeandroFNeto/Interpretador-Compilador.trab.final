@@ -185,7 +185,6 @@ O projeto contém verificações para erros comuns como:
 * Falta de função `main()`
 * Estruturas não definidas antes do uso
 
-## Alunos
-* Gustavo Granadier Homem de Almeida
-* Pedro Henrique Pedroso
-* 🎃
+## Alunos 
+
+
