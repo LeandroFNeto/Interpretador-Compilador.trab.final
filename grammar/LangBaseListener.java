@@ -29,13 +29,8 @@ public class LangBaseListener implements LangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPreprocessorDirective(LangParser.PreprocessorDirectiveContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPreprocessorDirective(LangParser.PreprocessorDirectiveContext ctx) { }
+	
+
 	/**
 	 * {@inheritDoc}
 	 *

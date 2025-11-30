@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int fatorial(int n) {
+    if (n < 2) { return 1; }
+    return n * fatorial(n - 1);
+}
+
+int fibonacci(int n) {
+    if (n <= 1) { return n; }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+void dobrarValor(int *p) {
+    *p = *p * 2; 
+}
+
+struct Ponto { int x; int y; };
+union Dados { int i; float f; };
+
+int main() {
+    printf("--- INICIO DOS TESTES ---");
+    
+    int n = 5;
+    int fat = fatorial(n);
+    printf("Fatorial de %d: %d", n, fat);
+
+    int termo = 7;
+    int fib = fibonacci(termo);
+    printf("Fibonacci termo %d: %d", termo, fib);
+
+    printf("\n--- TESTE TIPOS ---");
+    struct Ponto p1;
+    p1.x = 10;
+    p1.y = 20;
+    printf("Ponto: X=%d, Y=%d", p1.x, p1.y);
+
+    union Dados d;
+    d.i = 42;
+    printf("Union gravada como int: %d", d.i);
+
+    printf("\n--- TESTE PONTEIROS ---");
+    int valor = 15;
+    printf("Valor original: %d", valor);
+    int *ptr;     
+    ptr = &valor; 
+    dobrarValor(ptr); 
+    printf("Valor dobrado (via ponteiro): %d", valor);
+
+    printf("\n--- TESTE ARRAYS ---");
+    int lista[3];
+    lista[0] = 100;
+    lista[1] = 200;
+    lista[2] = 300;
+    int i;
+    for(i = 0; i < 3; i++) {
+        printf("Lista[%d] = %d", i, lista[i]);
+    }
+
+    printf("\n--- TESTE ATOI ---");
+    int num = atoi("12345");
+    printf("Convertido: %d", num);
+
+    // === NOVO: TESTE DE STRINGS ===
+    printf("\n--- TESTE STRINGS ---");
+    char *texto;
+    texto = "Ola Mundo";
+    printf("String: %s", texto);
+
+    printf("\n--- FIM ---");
+    return 0;
+}

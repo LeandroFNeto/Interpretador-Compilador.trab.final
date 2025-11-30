@@ -21,12 +21,7 @@ public interface LangListener extends ParseTreeListener {
 	 * Enter a parse tree produced by {@link LangParser#preprocessorDirective}.
 	 * @param ctx the parse tree
 	 */
-	void enterPreprocessorDirective(LangParser.PreprocessorDirectiveContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LangParser#preprocessorDirective}.
-	 * @param ctx the parse tree
-	 */
-	void exitPreprocessorDirective(LangParser.PreprocessorDirectiveContext ctx);
+	
 	/**
 	 * Enter a parse tree produced by {@link LangParser#declaration}.
 	 * @param ctx the parse tree
